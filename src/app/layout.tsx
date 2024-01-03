@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { MotionOptimize } from "utils/FramerMotion";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,6 +22,7 @@ export default function RootLayout({
         className={`${inter.className} overflow-x-hidden overflow-y-scroll bg-body-color text-white`}
       >
         <MotionOptimize>{children}</MotionOptimize>
+        <Analytics />
       </body>
     </html>
   );
