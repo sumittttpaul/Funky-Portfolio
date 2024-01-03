@@ -1,6 +1,6 @@
 import Image from "next/image";
-import TextAnimaiton1 from "../../public/text_animation_1.gif";
-import TextAnimaiton2 from "../../public/text_animation_2.gif";
+import TextAnimation1 from "../../public/text_animation_1.gif";
+import TextAnimation2 from "../../public/text_animation_2.gif";
 import { SpotlightCardDynamic, SpotlightDynamic } from "./Spotlight";
 
 export default function Name({ isMobile }: { isMobile: boolean }) {
@@ -11,9 +11,9 @@ export default function Name({ isMobile }: { isMobile: boolean }) {
     >
       <SpotlightCardDynamic
         isMobile={isMobile}
-        className="box-animation-Name box-shadow w-full rounded-3xl p-0 lg:w-auto lg:transition-all lg:duration-500 lg:hover:shadow-white/20"
+        className="box-animation-Name box-shadow w-full p-0 lg:w-auto lg:rounded-3xl lg:transition-all lg:duration-500 lg:hover:shadow-white/20"
       >
-        <div className="group z-20 flex w-full flex-col rounded-3xl border-white/20 lg:w-auto lg:border-2 lg:p-5">
+        <div className="group flex w-full flex-col border-white/20 lg:w-auto lg:rounded-3xl lg:border-2 lg:p-5">
           <h2 className="hidden text-2xl font-bold text-white/20 group-hover:text-white lg:block lg:transition-colors lg:duration-500">
             Name
           </h2>
@@ -26,7 +26,7 @@ export default function Name({ isMobile }: { isMobile: boolean }) {
             <div className="relative block h-[57px] w-[280px] lg:h-[82px] lg:w-[400px]">
               <Image
                 fill
-                src={TextAnimaiton1}
+                src={TextAnimation1}
                 sizes="(min-width: 1024px) 400px, 280px"
                 alt="User Name Text Animation"
               />
@@ -34,7 +34,7 @@ export default function Name({ isMobile }: { isMobile: boolean }) {
             <div className="relative -mt-1 block h-[58px] w-[168px] lg:-mt-2 lg:h-[83px] lg:w-[240px]">
               <Image
                 fill
-                src={TextAnimaiton2}
+                src={TextAnimation2}
                 sizes="(min-width: 1024px) 240px, 168px"
                 alt="User Name Text Animation"
               />

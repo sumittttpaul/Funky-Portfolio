@@ -13,7 +13,7 @@ export default function Skills({ isMobile }: { isMobile: boolean }) {
         isMobile={isMobile}
         className="box-animation-Skill box-shadow flex hover:shadow-white/20 lg:hidden lg:w-auto lg:max-w-[465px] lg:rounded-3xl lg:transition-all lg:duration-500 xl:flex"
       >
-        <div className="group z-20 flex w-full flex-col rounded-3xl border-white/20 lg:border-2 lg:p-5">
+        <div className="group flex w-full flex-col border-white/20 lg:rounded-3xl lg:border-2 lg:p-5">
           <h2 className="hidden text-2xl font-bold text-white/20 group-hover:text-white lg:block lg:transition-colors lg:duration-500">
             Skills
           </h2>

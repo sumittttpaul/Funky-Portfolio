@@ -1,9 +1,9 @@
 import Image from "next/image";
-import BackgrounImage from "../../public/background_image.png";
+import BackgroundImage from "../../public/background_image.png";
 
 export default function Mascot() {
   return (
-    <div className="relative w-auto lg:w-full -z-20 -mt-[200px] h-full scale-75 sm:-mt-[150px] lg:mt-0 lg:h-screen lg:scale-100">
+    <div className="relative -z-20 -mt-[200px] h-full w-auto scale-75 sm:-mt-[150px] lg:mt-0 lg:h-screen lg:w-full lg:scale-100">
       <div className="absolute top-0 -z-10 flex h-full w-full items-center justify-center">
         <div className="-mt-[300px] ml-[150px] block aspect-square h-[500px] min-h-[500px] w-[500px] min-w-[500px] bg-gradient-radial from-dark-red to-75%" />
         <div className="-ml-[200px] mt-[100px] flex flex-col">
@@ -19,8 +19,9 @@ export default function Mascot() {
         <Image
           height={800}
           width={360}
-          src={BackgrounImage}
+          src={BackgroundImage}
           alt="User Mascot Background Image"
+          priority
         />
       </div>
     </div>

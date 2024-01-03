@@ -18,9 +18,9 @@ export function About_ShortL() {
 
 export function About_ShortR() {
   return (
-    <Spotlight className="mr-auto mt-1.5 hidden w-full items-center justify-center lg:mt-4 lg:max-w-[465px] 2xl:flex">
-      <SpotlightCard className="box-animation-About box-shadow h-auto rounded-3xl p-0 lg:transition-all lg:duration-500 lg:hover:shadow-white/20">
-        <div className=" group z-20 flex w-full flex-col rounded-3xl border-white/20 lg:border-2 lg:p-5">
+    <Spotlight className="mr-auto hidden w-full items-center justify-center lg:mt-4 lg:max-w-[465px] 2xl:flex">
+      <SpotlightCard className="box-animation-About box-shadow h-auto p-0 lg:rounded-3xl lg:transition-all lg:duration-500 lg:hover:shadow-white/20">
+        <div className=" group flex w-full flex-col border-white/20 lg:rounded-3xl lg:border-2 lg:p-5">
           <h2 className="mb-3 hidden text-2xl font-bold text-white/20 group-hover:text-white lg:block lg:transition-colors lg:duration-500">
             About
           </h2>

@@ -30,6 +30,7 @@ label {
 
 img::selection {
   background: transparent !important;
+  color: #ff4500;
 }
 
 @media (min-width: 1024px) {

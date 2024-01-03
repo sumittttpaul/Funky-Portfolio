@@ -2,9 +2,9 @@ import { SpotlightCard, Spotlight } from "./Spotlight";
 
 export default function Causes() {
   return (
-    <Spotlight className="hidden h-auto w-auto flex-col items-center justify-center xl:flex lg:h-[30%]">
-      <SpotlightCard className="box-animation-Causes box-shadow w-full rounded-3xl p-0 lg:w-auto lg:transition-all lg:duration-500 lg:hover:shadow-white/20">
-        <div className="group z-20 flex w-full flex-col rounded-3xl border-white/20 lg:w-auto lg:border-2 lg:p-5">
+    <Spotlight className="hidden h-auto w-auto flex-col items-center justify-center lg:h-[30%] xl:flex">
+      <SpotlightCard className="box-animation-Causes box-shadow w-full p-0 lg:w-auto lg:rounded-3xl lg:transition-all lg:duration-500 lg:hover:shadow-white/20">
+        <div className="group flex w-full flex-col border-white/20 lg:w-auto lg:rounded-3xl lg:border-2 lg:p-5">
           <h2 className="mb-3 hidden text-2xl font-bold text-white/20 group-hover:text-white lg:block lg:transition-colors lg:duration-500">
             Causes
           </h2>
