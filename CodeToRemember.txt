@@ -1,0 +1,16 @@
+<TypeAnimation
+    sequence={[
+        "Hello Everyone",
+        2000,
+        "Wanna explore my portfolio",
+        2000,
+        "Let's Start",
+    ]}
+    wrapper="p"
+    speed={50}
+    repeat={Infinity}
+    style={{
+        fontSize: "20px",
+        display: "block",
+    }}
+/>
