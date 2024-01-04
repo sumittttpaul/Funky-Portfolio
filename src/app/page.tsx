@@ -26,7 +26,7 @@ export default function Home() {
           <StarsCanvas />
         </section>
         <section className="flex h-full w-full flex-col p-5">
-          <SocialHandling />
+          <SocialHandling isMobile={isMobile}/>
         </section>
       </div>
       <Loading isMobile={isMobile} />
