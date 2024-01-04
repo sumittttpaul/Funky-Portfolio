@@ -1,11 +1,11 @@
-import Card from "components/Card";
-import Header from "components/Header";
-import Landing from "interface/Landing";
-import Loading from "interface/Loading";
-import StarsCanvas from "components/StarBackground";
-import ClientDiv from "components/ClientDiv";
 import { parse } from "next-useragent";
 import { headers } from "next/headers";
+import Header from "components/Header";
+import ClientDiv from "components/ClientDiv";
+import StarsCanvas from "components/StarBackground";
+import Landing from "interface/Landing";
+import Loading from "interface/Loading";
+import SocialHandling from "interface/SocialHandling";
 
 export default function Home() {
   const headersList = headers();
@@ -26,7 +26,7 @@ export default function Home() {
           <StarsCanvas />
         </section>
         <section className="flex h-full w-full flex-col p-5">
-          <Card />
+          <SocialHandling />
         </section>
       </div>
       <Loading isMobile={isMobile} />
