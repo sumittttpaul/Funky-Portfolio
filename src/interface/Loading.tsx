@@ -10,7 +10,7 @@ const transition = {
   type: "keyframes",
 };
 
-export default function Loading() {
+export default function Loading({ isMobile }: { isMobile: boolean }) {
   const LoadingState = useLoadingState();
   const onAnimationComplete = () => LoadingState.toggleComplete();
 
@@ -23,12 +23,12 @@ export default function Loading() {
           initial={{ opacity: "100%" }}
           animate={{ opacity: "0%" }}
           transition={{ ...transition, delay: 7.1 }}
-          className="absolute top-0 z-[999] flex h-full w-full items-center justify-center bg-body-color opacity-100"
+          className="absolute top-0 z-[999] flex h-full w-full items-center justify-center bg-black opacity-100"
         >
           <TextArrayAnimation transition={transition} />
         </MotionDiv>
       )}
-      <UserButton DecreaseZIndex={LoadingState.Complete} />
+      <UserButton DecreaseZIndex={LoadingState.Complete} isMobile={isMobile} />
     </>
   );
 }

@@ -5,14 +5,8 @@ import Mascot from "../components/Mascot";
 import Preferences from "components/Preference";
 import Causes from "components/Causes";
 import Talks from "components/Talks";
-import { parse } from "next-useragent";
-import { headers } from "next/headers";
 
-export default function Landing() {
-  const headersList = headers();
-  const userAgent = headersList.get("user-agent") ?? "";
-  const isMobile = parse(userAgent).isMobile;
-
+export default function Landing({ isMobile }: { isMobile: boolean }) {
   return (
     <main className="flex h-full w-full flex-col lg:flex-row">
       <div className="flex h-full w-full flex-col justify-center">

@@ -4,21 +4,27 @@ import Landing from "interface/Landing";
 import Loading from "interface/Loading";
 import StarsCanvas from "components/StarBackground";
 import ClientDiv from "components/ClientDiv";
+import { parse } from "next-useragent";
+import { headers } from "next/headers";
 
 export default function Home() {
+  const headersList = headers();
+  const userAgent = headersList.get("user-agent") ?? "";
+  const isMobile = parse(userAgent).isMobile;
+
   return (
-    <ClientDiv className="relative flex h-screen w-screen flex-col">
+    <ClientDiv className="relative flex w-screen flex-col">
       <div className="mx-auto flex w-full max-w-[1500px] flex-col">
         <section className="flex h-full w-full flex-col px-5 pb-5 pt-24 lg:pt-5">
           <Header />
-          <Landing />
+          <Landing isMobile={isMobile} />
           <StarsCanvas />
         </section>
         <section className="flex h-full w-full flex-col p-5">
           <Card />
         </section>
       </div>
-      <Loading />
+      <Loading isMobile={isMobile} />
     </ClientDiv>
   );
 }

@@ -5,6 +5,7 @@ import Sumit_Photo from "../../public/sumit_photo.png";
 import { MotionDiv } from "utils/FramerMotion";
 import { useEffect, useState } from "react";
 import { useMotionValue } from "framer-motion";
+import { useLoadingState } from "utils/Zustand";
 
 type AnimationType = "move-left";
 
@@ -19,38 +20,32 @@ const ExtraWidth = 1500 + 50;
 
 export default function UserButton({
   DecreaseZIndex,
+  isMobile,
 }: {
   DecreaseZIndex: boolean;
+  isMobile: boolean;
 }) {
   const [Animation, setAnimation] = useState<AnimationType>();
-  const [vw, setVw] = useState(0);
-  const [vh, setVh] = useState(0);
+  const [viewport, setViewport] = useState({ width: 0, height: 0 });
+  const LoadingState = useLoadingState();
   const x = useMotionValue(0);
 
   const Variant = {
     "move-left": {
       height: "50px",
       width: "50px",
-      x: vw > ExtraWidth ? MaxWidth / 2 - 25 : vw / 2 - 45,
-      y: -vh / 2 + 45,
+      x:
+        viewport.width > ExtraWidth
+          ? MaxWidth / 2 - 25
+          : viewport.width / 2 - 45,
+      y: isMobile ? -viewport.height / 2 + 15 : -viewport.height / 2 + 45,
     },
   };
 
-  const onAnimationComplete = () => {
-    setAnimation("move-left");
-  };
+  const onAnimationComplete = () => setAnimation("move-left");
 
   useEffect(() => {
-    const vw = Math.max(
-      document.documentElement.clientWidth || 0,
-      window.innerWidth || 0,
-    );
-    const vh = Math.max(
-      document.documentElement.clientHeight || 0,
-      window.innerHeight || 0,
-    );
-    setVw(vw);
-    setVh(vh);
+    setViewport({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
   useEffect(() => {
@@ -66,7 +61,11 @@ export default function UserButton({
   }, []);
 
   return (
-    <div className={`${DecreaseZIndex && '-z-10'} absolute flex h-full w-full items-center justify-center`}>
+    <div
+      className={`${
+        DecreaseZIndex && "-z-10"
+      } absolute flex h-full w-full items-center justify-center`}
+    >
       <MotionDiv
         id="Image_Moving_Div"
         animate={Animation}
