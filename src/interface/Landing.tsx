@@ -12,15 +12,15 @@ export default function Landing({ isMobile }: { isMobile: boolean }) {
       <div className="flex h-full w-full flex-col justify-center">
         <Name isMobile={isMobile} />
         {!isMobile && <Causes />}
-        <About_ShortL />
+        <About_ShortL isMobile={isMobile} />
         <Skills isMobile={isMobile} />
       </div>
-      <Mascot />
+      <Mascot isMobile={isMobile} />
       {!isMobile && (
         <div className="flex h-full w-full flex-col justify-center lg:flex-col">
           <Preferences />
           <Talks />
-          <About_ShortR />
+          <About_ShortR isMobile={isMobile} />
         </div>
       )}
     </main>

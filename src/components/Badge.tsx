@@ -14,61 +14,69 @@ function Box(props: { children: React.ReactNode; BGColor: string }) {
   );
 }
 
-function Text(props: { children: React.ReactNode }) {
+function Text(props: { children: React.ReactNode; isMobile: boolean }) {
   return (
-    <h4 className="block text-[13px] font-medium lg:text-sm">
+    <h4
+      className={`block ${
+        props.isMobile ? "text-xs" : "text-[13px]"
+      } font-medium lg:text-sm`}
+    >
       {props.children}
     </h4>
   );
 }
 
-export function SalesBadge() {
+export function SalesBadge({ isMobile }: { isMobile: boolean }) {
   return (
-    <Box BGColor="bg-[#91020090] min-w-[80px]">
+    <Box BGColor={`bg-[#91020090] ${isMobile ? "w-[75px]" : "w-[80px]"}`}>
       <Image height={20} width={20} src={HotBadgeIcon} alt="Hot Badge Icon" />
-      <Text>Sales</Text>
+      <Text isMobile={isMobile}>Sales</Text>
     </Box>
   );
 }
 
-export function TechBadge() {
-  return ( 
-    <Box BGColor="bg-[#b48a0090] min-w-[76px]">
+export function TechBadge({ isMobile }: { isMobile: boolean }) {
+  return (
+    <Box BGColor={`bg-[#b48a0090] ${isMobile ? "w-[71px]" : "w-[76px]"}`}>
       <Image
         height={20}
         width={20}
         src={TechBadgeIcon}
         alt="Lightning Badge Icon"
       />
-      <Text>Tech</Text>
+      <Text isMobile={isMobile}>Tech</Text>
     </Box>
   );
 }
 
-export function CodingBadge() {
+export function CodingBadge({ isMobile }: { isMobile: boolean }) {
   return (
-    <Box BGColor="bg-[#b48a0090] min-w-[92px]">
+    <Box BGColor={`bg-[#b48a0090] ${isMobile ? "w-[85px]" : "w-[92px]"}`}>
       <Image
         height={20}
         width={20}
         src={ProgrammingBadgeIcon}
         alt="New Badge Icon"
       />
-      <Text>Coding</Text>
+      <Text isMobile={isMobile}>Coding</Text>
     </Box>
   );
 }
 
-export function MarketingBadge() {
+export function MarketingBadge({ isMobile }: { isMobile: boolean }) {
   return (
-    <Box BGColor="bg-[#0063b490] space-x-2 min-w-[113px]">
+    <Box
+      BGColor={`bg-[#0063b490] space-x-2 ${
+        isMobile ? "w-[105px]" : "w-[113px]"
+      }`}
+    >
       <Image
         height={20}
         width={20}
         src={MarketingBadgeIcon}
         alt="Trending Badge Icon"
       />
-      <Text>Marketing</Text>
+      <Text isMobile={isMobile}>Marketing</Text>
     </Box>
   );
 }

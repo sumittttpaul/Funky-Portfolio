@@ -19,12 +19,12 @@ export default function Skills({ isMobile }: { isMobile: boolean }) {
           </h2>
           <div className="mt-2 flex w-full justify-between space-x-0 lg:mt-5 lg:justify-start lg:space-x-5">
             <div className="flex flex-col items-start justify-start space-x-0 space-y-3 lg:flex-row lg:space-x-5 lg:space-y-0">
-              <CodingBadge />
-              <SalesBadge />
+              <CodingBadge isMobile={isMobile} />
+              <SalesBadge isMobile={isMobile} />
             </div>
             <div className="flex flex-col items-end justify-end space-x-0 space-y-3 lg:flex-row lg:space-x-5 lg:space-y-0">
-              <MarketingBadge />
-              <TechBadge />
+              <MarketingBadge isMobile={isMobile} />
+              <TechBadge isMobile={isMobile} />
             </div>
           </div>
         </div>

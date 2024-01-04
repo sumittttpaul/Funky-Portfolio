@@ -1,9 +1,17 @@
 import { SpotlightCard, Spotlight } from "./Spotlight";
 
-export function About_ShortL() {
+export function About_ShortL({ isMobile }: { isMobile: boolean }) {
   return (
-    <div className="mr-auto mt-1.5 flex w-full items-center justify-start lg:mt-4 lg:hidden lg:w-auto lg:max-w-lg">
-      <p className="block text-pretty text-sm font-normal lg:text-base">
+    <div
+      className={`mr-auto ${
+        isMobile ? "mt-0" : "mt-1.5"
+      } flex w-full items-center justify-start lg:mt-4 lg:hidden lg:w-auto lg:max-w-lg`}
+    >
+      <p
+        className={`block text-pretty ${
+          isMobile ? "text-xs" : "text-sm"
+        } font-normal lg:text-base`}
+      >
         I&apos;m a passionate 3rd Year BBA student at Kalinga University with a
         specialized focus in Marketing. Alongside my studies, I thrive on the
         creative intersection of business strategy and technological
@@ -16,7 +24,7 @@ export function About_ShortL() {
   );
 }
 
-export function About_ShortR() {
+export function About_ShortR({ isMobile }: { isMobile: boolean }) {
   return (
     <Spotlight className="mr-auto hidden w-full items-center justify-center lg:mt-4 lg:max-w-[465px] 2xl:flex">
       <SpotlightCard className="box-animation-About box-shadow h-auto p-0 lg:rounded-3xl lg:transition-all lg:duration-500 lg:hover:shadow-white/20">
@@ -24,7 +32,11 @@ export function About_ShortR() {
           <h2 className="mb-3 hidden text-2xl font-bold text-white/20 group-hover:text-white lg:block lg:transition-colors lg:duration-500">
             About
           </h2>
-          <p className="block text-pretty text-sm font-normal lg:text-base">
+          <p
+            className={`block text-pretty ${
+              isMobile ? "text-xs" : "text-sm"
+            } font-normal lg:text-base`}
+          >
             I&apos;m a passionate 3rd Year BBA student at Kalinga University
             with a specialized focus in Marketing. Alongside my studies, I
             thrive on the creative intersection of business strategy and

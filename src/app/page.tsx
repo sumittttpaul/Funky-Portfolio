@@ -15,8 +15,13 @@ export default function Home() {
   return (
     <ClientDiv className="relative flex w-screen flex-col">
       <div className="mx-auto flex w-full max-w-[1500px] flex-col">
-        <section className="flex h-full w-full flex-col px-5 pb-5 pt-24 lg:pt-5">
-          <Header />
+        {/* Added "pt-24" between "Back to LinkedIn" button and "Hello, I am" */}
+        <section
+          className={`flex h-full w-full flex-col px-5 pb-5 ${
+            isMobile ? "pt-[93px]" : "pt-24"
+          } lg:pt-5`}
+        >
+          <Header isMobile={isMobile} />
           <Landing isMobile={isMobile} />
           <StarsCanvas />
         </section>

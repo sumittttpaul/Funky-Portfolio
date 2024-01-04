@@ -23,9 +23,9 @@ export default function Loading({ isMobile }: { isMobile: boolean }) {
           initial={{ opacity: "100%" }}
           animate={{ opacity: "0%" }}
           transition={{ ...transition, delay: 7.1 }}
-          className="absolute top-0 z-[999] flex h-full w-full items-center justify-center loading-black opacity-100"
+          className="loading-black absolute top-0 z-[999] flex h-full w-full items-center justify-center opacity-100"
         >
-          <TextArrayAnimation transition={transition} />
+          <TextArrayAnimation transition={transition} isMobile={isMobile} />
         </MotionDiv>
       )}
       <UserButton DecreaseZIndex={LoadingState.Complete} isMobile={isMobile} />

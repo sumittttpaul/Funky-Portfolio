@@ -13,7 +13,13 @@ const TEXTS = [
   "here!",
 ];
 
-export default function TextArrayAnimation({ transition }: { transition: {} }) {
+export default function TextArrayAnimation({
+  transition,
+  isMobile,
+}: {
+  transition: {};
+  isMobile: boolean;
+}) {
   const [Animation, setAnimation] = useState("");
 
   useEffect(() => {
@@ -33,12 +39,20 @@ export default function TextArrayAnimation({ transition }: { transition: {} }) {
       transition={transition}
       className="ml-[calc(50%-100px)] flex w-full flex-col items-center delay-150"
     >
-      <h1 className="w-full justify-start text-[25px] font-extrabold tracking-wider">
+      <h1
+        className={`w-full justify-start ${
+          isMobile ? "text-[20px]" : "text-[25px]"
+        } font-extrabold tracking-wider`}
+      >
         <span className="bg-gradient-to-r from-[#ffa500] to-[#ff4500] bg-clip-text text-transparent">
           I&apos;m
         </span>
       </h1>
-      <h1 className="w-full justify-start text-[23px] font-bold tracking-wide">
+      <h1
+        className={`w-full justify-start ${
+          isMobile ? "text-[18px]" : "text-[23px]"
+        } font-bold tracking-wide`}
+      >
         <SlideUpTextTransition items={TEXTS} duration={1000} />
       </h1>
     </MotionDiv>

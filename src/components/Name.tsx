@@ -17,12 +17,20 @@ export default function Name({ isMobile }: { isMobile: boolean }) {
           <h2 className="hidden text-2xl font-bold text-white/20 group-hover:text-white lg:block lg:transition-colors lg:duration-500">
             Name
           </h2>
-          <h1 className="w-full text-start text-[35px] font-[900] lg:text-[45px] lg:font-[1000]">
+          <h1
+            className={`w-full text-start ${
+              isMobile ? "text-[30px] font-[800]" : "text-[35px] font-[900]"
+            } lg:text-[45px] lg:font-[1000]`}
+          >
             <span className="to bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
               Hello, I am
             </span>
           </h1>
-          <div className="-ml-2 -mt-3 flex w-full flex-col">
+          <div
+            className={`${
+              isMobile ? "-ml-6 -mt-4 scale-90" : "-ml-2 -mt-3 scale-100"
+            } flex w-full flex-col`}
+          >
             <div className="relative block h-[57px] w-[280px] lg:h-[82px] lg:w-[400px]">
               <Image
                 fill

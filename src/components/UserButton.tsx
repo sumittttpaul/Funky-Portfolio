@@ -27,13 +27,13 @@ export default function UserButton({
 }) {
   const [Animation, setAnimation] = useState<AnimationType>();
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
-  const LoadingState = useLoadingState();
+  // const LoadingState = useLoadingState();
   const x = useMotionValue(0);
 
   const Variant = {
     "move-left": {
-      height: "50px",
-      width: "50px",
+      height: isMobile ? "40px" : "50px",
+      width: isMobile ? "40px" : "50px",
       x:
         viewport.width > ExtraWidth
           ? MaxWidth / 2 - 25
@@ -75,7 +75,9 @@ export default function UserButton({
           delay: 0.5,
         }}
         variants={Variant}
-        className="absolute flex"
+        className={`relative flex ${
+          isMobile ? "h-[150px] w-[150px]" : "h-[195px] w-[195px]"
+        }`}
       >
         <MotionDiv
           id="Image_Div"
@@ -85,11 +87,11 @@ export default function UserButton({
           className="opacity-0"
         >
           <Image
+            fill
             src={Sumit_Photo}
-            height={195}
-            width={195}
             alt="Sumeet Kumar Paul"
             className="rounded-full"
+            sizes="(min-width: 1024px) 195px, 150px"
             priority
           />
         </MotionDiv>
