@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} overflow-x-hidden overflow-y-hidden bg-body-color text-white`}
+        className={`${inter.className} overflow-x-hidden overflow-y-scroll bg-body-color text-white`}
       >
         <MotionOptimize>{children}</MotionOptimize>
         <Analytics />
