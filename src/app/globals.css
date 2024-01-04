@@ -33,6 +33,10 @@ img::selection {
   color: #ff4500;
 }
 
+.loading-black {
+  background-color: black;
+}
+
 @media (min-width: 1024px) {
   .box-shadow:hover {
     box-shadow: 0 0px 60px -10px rgb(255 255 255 / 0.25);

@@ -23,7 +23,7 @@ export default function Loading({ isMobile }: { isMobile: boolean }) {
           initial={{ opacity: "100%" }}
           animate={{ opacity: "0%" }}
           transition={{ ...transition, delay: 7.1 }}
-          className="absolute top-0 z-[999] flex h-full w-full items-center justify-center bg-black opacity-100"
+          className="absolute top-0 z-[999] flex h-full w-full items-center justify-center loading-black opacity-100"
         >
           <TextArrayAnimation transition={transition} />
         </MotionDiv>

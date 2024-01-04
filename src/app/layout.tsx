@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { MotionOptimize } from "utils/FramerMotion";
 import { Analytics } from "@vercel/analytics/react";
@@ -9,6 +9,13 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sumeet Kumar Paul",
   description: "Portfolio by Sumit",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000814",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
