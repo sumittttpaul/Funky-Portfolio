@@ -5,6 +5,7 @@ import Sumit_Photo from "../../public/sumit_photo.png";
 import { MotionDiv } from "utils/FramerMotion";
 import { useEffect, useState } from "react";
 import { useMotionValue } from "framer-motion";
+import { useLoadingState } from "utils/Zustand";
 
 type AnimationType = "move-left";
 
@@ -26,7 +27,9 @@ export default function UserButton({
 }) {
   const [Animation, setAnimation] = useState<AnimationType>();
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
+  const LoadingState = useLoadingState();
   const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
   const Variant = {
     "move-left": {
@@ -36,7 +39,7 @@ export default function UserButton({
         viewport.width > ExtraWidth
           ? MaxWidth / 2 - 25
           : viewport.width / 2 - 45,
-      y: isMobile ? -viewport.height / 2 + 15 : -viewport.height / 2 + 45,
+      y: -viewport.height / 2 + 45,
     },
   };
 
@@ -45,6 +48,10 @@ export default function UserButton({
   useEffect(() => {
     setViewport({ width: window.innerWidth, height: window.innerHeight });
   }, []);
+
+  useEffect(() => {
+    if (LoadingState.Complete && isMobile) y.set(-viewport.height / 2 + 14);
+  }, [LoadingState.Complete, y, viewport.height, isMobile]);
 
   useEffect(() => {
     const handleResize = () =>
@@ -67,7 +74,7 @@ export default function UserButton({
       <MotionDiv
         id="Image_Moving_Div"
         animate={Animation}
-        style={{ x }}
+        style={{ x, y }}
         transition={{
           ...Transition,
           delay: 0.5,
