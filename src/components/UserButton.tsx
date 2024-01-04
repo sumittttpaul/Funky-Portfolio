@@ -5,7 +5,6 @@ import Sumit_Photo from "../../public/sumit_photo.png";
 import { MotionDiv } from "utils/FramerMotion";
 import { useEffect, useState } from "react";
 import { useMotionValue } from "framer-motion";
-import { useLoadingState } from "utils/Zustand";
 
 type AnimationType = "move-left";
 
@@ -27,7 +26,6 @@ export default function UserButton({
 }) {
   const [Animation, setAnimation] = useState<AnimationType>();
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
-  // const LoadingState = useLoadingState();
   const x = useMotionValue(0);
 
   const Variant = {

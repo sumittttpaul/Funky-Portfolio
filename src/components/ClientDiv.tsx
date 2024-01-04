@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useLoadingState } from "utils/Zustand";
 
 export default function ClientDiv({
