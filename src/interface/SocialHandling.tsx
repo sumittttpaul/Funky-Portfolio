@@ -14,7 +14,7 @@ export default function SocialHandling({ isMobile }: { isMobile: boolean }) {
             Follow me on
           </span>
         </h2>
-        <div className="block h-[53px] -mt-3">
+        <div className="-mt-3 block h-[53px]">
           <TextTypeAnimation />
         </div>
       </div>

@@ -4,12 +4,12 @@ export function About_ShortL({ isMobile }: { isMobile: boolean }) {
   return (
     <div
       className={`mr-auto ${
-        isMobile ? "mt-0" : "mt-1.5"
+        isMobile ? "-mt-1.5" : "mt-1.5"
       } flex w-full items-center justify-start lg:mt-4 lg:hidden lg:w-auto lg:max-w-lg`}
     >
       <p
         className={`block text-pretty ${
-          isMobile ? "text-xs" : "text-sm"
+          isMobile ? "text-[11px]" : "text-sm"
         } font-normal lg:text-base`}
       >
         I&apos;m a passionate 3rd Year BBA student at Kalinga University with a

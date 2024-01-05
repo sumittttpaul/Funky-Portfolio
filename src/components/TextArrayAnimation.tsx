@@ -37,11 +37,13 @@ export default function TextArrayAnimation({
         ending: { opacity: 0 },
       }}
       transition={transition}
-      className="ml-[calc(50%-100px)] flex w-full flex-col items-center delay-150"
+      className={`${
+        isMobile ? "ml-[calc(50%-80px)]" : "ml-[calc(50%-100px)]"
+      } flex w-full flex-col items-center delay-150`}
     >
       <h1
         className={`w-full justify-start ${
-          isMobile ? "text-[20px]" : "text-[25px]"
+          isMobile ? "text-[18px]" : "text-[25px]"
         } font-extrabold tracking-wider`}
       >
         <span className="bg-gradient-to-r from-[#ffa500] to-[#ff4500] bg-clip-text text-transparent">
@@ -50,7 +52,7 @@ export default function TextArrayAnimation({
       </h1>
       <h1
         className={`w-full justify-start ${
-          isMobile ? "text-[18px]" : "text-[23px]"
+          isMobile ? "text-[16px]" : "text-[23px]"
         } font-bold tracking-wide`}
       >
         <SlideUpTextTransition items={TEXTS} duration={1000} />

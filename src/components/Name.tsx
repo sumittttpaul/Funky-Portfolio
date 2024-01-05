@@ -19,7 +19,7 @@ export default function Name({ isMobile }: { isMobile: boolean }) {
           </h2>
           <h1
             className={`w-full text-start ${
-              isMobile ? "text-[30px] font-[800]" : "text-[35px] font-[900]"
+              isMobile ? "text-[25px] font-[800]" : "text-[35px] font-[900]"
             } lg:text-[45px] lg:font-[1000]`}
           >
             <span className="to bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
@@ -28,7 +28,7 @@ export default function Name({ isMobile }: { isMobile: boolean }) {
           </h1>
           <div
             className={`${
-              isMobile ? "-ml-6 -mt-4 scale-90" : "-ml-2 -mt-3 scale-100"
+              isMobile ? "-ml-9 -mt-6 scale-[0.8]" : "-ml-2 -mt-3 scale-100"
             } flex w-full flex-col`}
           >
             <div className="relative block h-[57px] w-[280px] lg:h-[82px] lg:w-[400px]">

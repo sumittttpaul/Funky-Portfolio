@@ -18,7 +18,7 @@ export default function Home() {
         {/* Added "pt-24" between "Back to LinkedIn" button and "Hello, I am" */}
         <section
           className={`flex h-full w-full flex-col px-5 pb-5 ${
-            isMobile ? "pt-[93px]" : "pt-24"
+            isMobile ? "pt-[86px]" : "pt-24"
           } lg:pt-5`}
         >
           <Header isMobile={isMobile} />

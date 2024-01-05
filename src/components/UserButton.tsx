@@ -39,7 +39,7 @@ export default function UserButton({
         viewport.width > ExtraWidth
           ? MaxWidth / 2 - 25
           : viewport.width / 2 - 45,
-      y: -viewport.height / 2 + 45,
+      y: isMobile ? -viewport.height / 2 + 40 : -viewport.height / 2 + 45,
     },
   };
 
@@ -50,7 +50,7 @@ export default function UserButton({
   }, []);
 
   useEffect(() => {
-    if (LoadingState.Complete && isMobile) y.set(-viewport.height / 2 + 14);
+    if (LoadingState.Complete && isMobile) y.set(-viewport.height / 2 + 12);
   }, [LoadingState.Complete, y, viewport.height, isMobile]);
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export default function UserButton({
         }}
         variants={Variant}
         className={`relative flex ${
-          isMobile ? "h-[150px] w-[150px]" : "h-[195px] w-[195px]"
+          isMobile ? "h-[130px] w-[130px]" : "h-[195px] w-[195px]"
         }`}
       >
         <MotionDiv
@@ -96,7 +96,7 @@ export default function UserButton({
             src={Sumit_Photo}
             alt="Sumeet Kumar Paul"
             className="rounded-full"
-            sizes="(min-width: 1024px) 195px, 150px"
+            sizes="(min-width: 1024px) 195px, 130px"
             priority
           />
         </MotionDiv>
