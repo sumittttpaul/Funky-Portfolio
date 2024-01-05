@@ -50,5 +50,6 @@ These are all the libraries that has been used to build this project :-
 7. Zustand
 8. Sharp
 9. Tailwindcss
-10. Dev - Prettier, Eslint, Typescript, React, Next
+10. cssnano
+11. Dev - Prettier, Eslint, Typescript, React, Next
 ```

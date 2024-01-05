@@ -22,7 +22,7 @@ export default function Name({ isMobile }: { isMobile: boolean }) {
               isMobile ? "text-[25px] font-[800]" : "text-[35px] font-[900]"
             } lg:text-[45px] lg:font-[1000]`}
           >
-            <span className="to bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
               Hello, I am
             </span>
           </h1>

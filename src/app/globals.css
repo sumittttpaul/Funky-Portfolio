@@ -30,10 +30,9 @@ label {
 
 img::selection {
   background: transparent !important;
-  color: #ff4500;
 }
 
-.loading-black {
+.loading-bg-black {
   background-color: black;
 }
 

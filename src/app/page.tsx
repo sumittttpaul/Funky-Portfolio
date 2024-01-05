@@ -6,6 +6,7 @@ import StarsCanvas from "components/StarBackground";
 import Landing from "interface/Landing";
 import Loading from "interface/Loading";
 import SocialHandling from "interface/SocialHandling";
+import AboutMe from "interface/AboutMe";
 
 export default function Home() {
   const headersList = headers();
@@ -24,6 +25,9 @@ export default function Home() {
           <Header isMobile={isMobile} />
           <Landing isMobile={isMobile} />
           <StarsCanvas />
+        </section>
+        <section className="flex h-full w-full flex-col p-5">
+          <AboutMe isMobile={isMobile} />
         </section>
         <section className="flex h-full w-full flex-col p-5">
           <SocialHandling isMobile={isMobile} />

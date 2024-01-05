@@ -5,15 +5,15 @@ export default function SocialHandling({ isMobile }: { isMobile: boolean }) {
   return (
     <div className="flex h-full w-full flex-col items-center justify-start space-y-5">
       <div className="flex w-full flex-col">
-        <h2
+        <h1
           className={`w-full text-start ${
-            isMobile ? "text-[30px] font-[900]" : "text-[30px] font-[900]"
-          } lg:text-[30px] lg:font-[900]`}
+            isMobile ? "text-[25px] font-[800]" : "text-[35px] font-[900]"
+          } lg:text-[45px] lg:font-[1000]`}
         >
-          <span className="to truncate bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
             Follow me on
           </span>
-        </h2>
+        </h1>
         <div className="-mt-3 block h-[53px]">
           <TextTypeAnimation />
         </div>

@@ -89,7 +89,7 @@ export default function UserButton({
           animate={{ opacity: 100 }}
           transition={{ ...Transition, delay: 6.2 }}
           onAnimationComplete={onAnimationComplete}
-          className="opacity-0"
+          className="opacity-0 absolute h-full w-full"
         >
           <Image
             fill
