@@ -5,7 +5,7 @@ export default function Mascot({ isMobile }: { isMobile: boolean }) {
   return (
     <div
       className={`${
-        isMobile ? "scale-90 -mt-[125px]" : "scale-100 -mt-[100px]"
+        isMobile ? "-mt-[125px] scale-90" : "-mt-[100px] scale-100"
       } relative -z-20 flex h-full w-auto flex-col items-center justify-center lg:mt-0 lg:h-screen lg:w-full`}
     >
       <div className="absolute top-0 -z-10 flex h-full w-full items-center justify-center">
@@ -30,6 +30,7 @@ export default function Mascot({ isMobile }: { isMobile: boolean }) {
           />
         </div>
       </div>
+      <div className="-mt-[50px] flex h-[50px] w-[270px] lg:w-[360px] bg-gradient-radial from-black to-75%" />
     </div>
   );
 }
