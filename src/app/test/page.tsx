@@ -41,7 +41,7 @@ export default function page() {
         </p>
       </div> */}
       {/* <LetterChanging/> */}
-      <TechThatIKnow />
+      <TechThatIKnow isMobile={isMobile} />
     </div>
   );
 }
