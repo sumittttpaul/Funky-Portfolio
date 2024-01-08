@@ -19,6 +19,8 @@ const config: Config = {
         "tech-badge": "#b48a0090",
         "coding-badge": "#b48a0090",
         "marketing-badge": "#0063b490",
+        "techthatiknow-color":"#0f172a",
+        "techthatiknow-button-color":"#334155",
         "about-pink": "#8b0048",
         "about-purple": "#30005c",
         "dark-red": "#4B0000", // rgba(75, 0, 0, 1)

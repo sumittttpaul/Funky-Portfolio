@@ -18,7 +18,7 @@ export default function SuggestionLabel({
               direction === "left"
                 ? "animation-direction-normal"
                 : "animation-direction-reverse"
-            } animation-move inline-flex w-full items-center justify-center`}
+            } suggestion-label-animation-move inline-flex w-full items-center justify-center`}
           >
             <h4
               className={`whitespace-nowrap text-xs font-[800] uppercase tracking-[5px] lg:text-lg ${className}`}

@@ -10,6 +10,7 @@ import AboutMe from "interface/AboutMe";
 import SuggestionLabel from "interface/SuggestionLabel";
 import BubbleText from "interface/BubbleText";
 import LetterChanging from "interface/LetterChanging";
+import TechThatIKnow from "interface/TechThatIKnow";
 
 export default function Home() {
   const headersList = headers();
@@ -30,6 +31,9 @@ export default function Home() {
             <Header isMobile={isMobile} />
             <Landing isMobile={isMobile} />
           </div>
+        </section>
+        <section className="flex h-full w-full flex-col">
+          <TechThatIKnow isMobile={isMobile} />
         </section>
         {!isMobile && (
           <>
@@ -55,9 +59,9 @@ export default function Home() {
         <section className="mx-auto flex h-full w-full max-w-screen-max-xl flex-col p-5">
           <LetterChanging />
         </section>
-        <section className="flex h-full w-full flex-col">
+        {/* <section className="flex h-full w-full flex-col">
           <AboutMe isMobile={isMobile} />
-        </section>
+        </section> */}
         <section className="mx-auto flex h-full w-full max-w-screen-max-xl flex-col p-5">
           <SocialHandling isMobile={isMobile} />
         </section>

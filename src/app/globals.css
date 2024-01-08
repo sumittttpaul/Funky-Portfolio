@@ -206,11 +206,29 @@ img::selection {
   }
 }
 
-.animation-move {
+.suggestion-label-animation-move {
   animation-name: move;
   animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.techthatiknow-animation-move {
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.techthatiknow-animation-duration-40 {
+  animation-duration: 40s;
+}
+
+.techthatiknow-animation-duration-90 {
+  animation-duration: 90s;
+}
+
+.techthatiknow-animation-duration-140 {
+  animation-duration: 140s;
 }
 
 .animation-direction-normal {

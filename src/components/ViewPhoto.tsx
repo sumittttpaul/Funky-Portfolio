@@ -16,26 +16,26 @@ export default function ViewPhoto({
       <Dialog as="div" className="relative z-10" onClose={onClose}>
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
+          enter="sm:ease-out sm:duration-300"
+          enterFrom="sm:opacity-0"
+          enterTo="sm:opacity-100"
+          leave="sm:ease-in sm:duration-200"
+          leaveFrom="sm:opacity-100"
+          leaveTo="sm:opacity-0"
         >
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
+          <div className="fixed inset-0 sm:bg-black/50 sm:backdrop-blur-sm" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4 text-center">
             <Transition.Child
               as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
+              enter="sm:ease-out sm:duration-300"
+              enterFrom="sm:opacity-0 sm:scale-95"
+              enterTo="sm:opacity-100 sm:scale-100"
+              leave="sm:ease-in sm:duration-200"
+              leaveFrom="sm:opacity-100 sm:scale-100"
+              leaveTo="sm:opacity-0 sm:scale-95"
             >
               <Dialog.Panel className="relative w-full max-w-[530px] transform overflow-hidden rounded-2xl bg-black/60 p-6 text-left align-middle shadow-xl backdrop-blur-2xl transition-all">
                 <Dialog.Title

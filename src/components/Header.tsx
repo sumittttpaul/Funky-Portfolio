@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header({ isMobile }: { isMobile: boolean }) {
   return (
-    <header className="absolute top-5 flex h-auto w-auto left-5 z-20">
+    <header className="absolute left-5 top-5 z-20 flex h-auto w-auto">
       <Link
         href=""
         className={`group ${

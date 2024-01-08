@@ -1,6 +1,7 @@
 import DotsAnimation from "components/DotsAnimation";
 import LetterChanging from "interface/LetterChanging";
 import Loading from "interface/Loading";
+import TechThatIKnow from "interface/TechThatIKnow";
 import { parse } from "next-useragent";
 import { headers } from "next/headers";
 
@@ -10,7 +11,7 @@ export default function page() {
   const isMobile = parse(userAgent).isMobile;
 
   return (
-    <div className="relative flex h-screen w-screen flex-col items-center justify-center bg-body-color">
+    <div className="relative flex h-screen w-screen flex-col items-center justify-center bg-body-color text-white">
       {/* <Loading isMobile={isMobile} />
       <div className="scroll-reveal flex flex-col space-y-5">
         <h1
@@ -40,6 +41,7 @@ export default function page() {
         </p>
       </div> */}
       {/* <LetterChanging/> */}
+      <TechThatIKnow />
     </div>
   );
 }

@@ -30,7 +30,7 @@ export default function Mascot({ isMobile }: { isMobile: boolean }) {
           />
         </div>
       </div>
-      <div className="-mt-[50px] flex h-[50px] w-[270px] lg:w-[360px] bg-gradient-radial from-black to-75%" />
+      <div className="z-10 -mt-[50px] flex h-[50px] w-[270px] bg-gradient-radial from-black to-75% lg:w-[360px]" />
     </div>
   );
 }
