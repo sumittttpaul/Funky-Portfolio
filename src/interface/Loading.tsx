@@ -2,6 +2,8 @@
 
 import TextArrayAnimation from "components/TextArrayAnimation";
 import UserButton from "components/UserButton";
+import ViewPhoto from "components/ViewPhoto";
+import { useState } from "react";
 import { MotionDiv } from "utils/FramerMotion";
 import { useLoadingState } from "utils/Zustand";
 
@@ -13,6 +15,7 @@ const transition = {
 export default function Loading({ isMobile }: { isMobile: boolean }) {
   const LoadingState = useLoadingState();
   const onAnimationComplete = () => LoadingState.toggleComplete();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -28,7 +31,12 @@ export default function Loading({ isMobile }: { isMobile: boolean }) {
           <TextArrayAnimation transition={transition} isMobile={isMobile} />
         </MotionDiv>
       )}
-      <UserButton DecreaseZIndex={LoadingState.Complete} isMobile={isMobile} />
+      <UserButton
+        DecreaseZIndex={LoadingState.Complete}
+        isMobile={isMobile}
+        setIsOpen={setIsOpen}
+      />
+      <ViewPhoto isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </>
   );
 }

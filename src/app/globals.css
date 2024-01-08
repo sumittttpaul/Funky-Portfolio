@@ -8,7 +8,9 @@
 }
 
 ::-webkit-scrollbar {
+  display: none;
   width: 0px;
+  -webkit-appearance: none;
 }
 
 a,
@@ -34,6 +36,80 @@ img::selection {
 
 .loading-bg-black {
   background-color: black;
+}
+
+.animating-border-radius {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  animation: morphing 10s infinite;
+  overflow: hidden;
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  25% {
+    border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
+    box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
+  }
+}
+
+.scroll-reveal span {
+  color: hsl(0 0% 100% / 0.1);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view(y);
+  -webkit-background-clip: text;
+}
+
+.scroll-reveal h1 span {
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(to right, #f472b6, #8014e6);
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 30vh;
+}
+
+.scroll-reveal p span {
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(to right, #ffffff, #ffffff);
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 75vh;
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 640px) {
+  .scroll-reveal h1 span {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+    background-image: linear-gradient(to right, #f472b6, #8014e6);
+    animation-range-start: cover 10vh;
+    animation-range-end: cover 20vh;
+  }
+
+  .scroll-reveal p span {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    animation-range-start: cover 10vh;
+    animation-range-end: cover 60vh;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -127,5 +203,101 @@ img::selection {
   to {
     opacity: 0;
     top: 35px;
+  }
+}
+
+.animation-move {
+  animation-name: move;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animation-direction-normal {
+  animation-direction: normal;
+}
+
+.animation-direction-reverse {
+  animation-direction: reverse;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.bubbleText {
+  transition:
+    0.35s font-weight,
+    0.35s color;
+}
+
+.bubbleText:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+}
+
+/* To the right */
+.bubbleText:hover + .bubbleText {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+}
+
+.bubbleText:hover + .bubbleText + .bubbleText {
+  font-weight: 300;
+}
+
+/* To the left */
+.bubbleText:has(+ .bubbleText:hover) {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+}
+
+.bubbleText:has(+ .bubbleText + .bubbleText:hover) {
+  font-weight: 300;
+}
+
+.letter-changing {
+  line-height: 0rem;
+  position: absolute;
+}
+
+.letter-changing:after {
+  content: "";
+  animation-name: letter-changing;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.2));
+}
+
+@keyframes letter-changing {
+  0% {
+    content: "s";
+  }
+  14% {
+    content: "a";
+  }
+  28% {
+    content: "y";
+  }
+  42% {
+    content: "h";
+  }
+  56% {
+    content: "e";
+  }
+  70% {
+    content: "y";
+  }
+  84% {
+    content: "!";
+  }
+  100% {
+    content: "s";
   }
 }

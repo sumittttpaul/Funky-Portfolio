@@ -3,7 +3,7 @@ import TextTypeAnimation from "components/TextTypeAnimation";
 
 export default function SocialHandling({ isMobile }: { isMobile: boolean }) {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-start space-y-5">
+    <div className="mt-20 flex h-full w-full flex-col items-center justify-start space-y-5">
       <div className="flex w-full flex-col">
         <h1
           className={`w-full text-start ${

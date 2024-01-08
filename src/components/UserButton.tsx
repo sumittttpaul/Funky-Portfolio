@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Sumit_Photo from "../../public/sumit_photo.png";
 import { MotionDiv } from "utils/FramerMotion";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useMotionValue } from "framer-motion";
 import { useLoadingState } from "utils/Zustand";
 
@@ -21,9 +21,11 @@ const ExtraWidth = 1500 + 50;
 export default function UserButton({
   DecreaseZIndex,
   isMobile,
+  setIsOpen,
 }: {
   DecreaseZIndex: boolean;
   isMobile: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   const [Animation, setAnimation] = useState<AnimationType>();
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
@@ -68,19 +70,20 @@ export default function UserButton({
   return (
     <div
       className={`${
-        DecreaseZIndex && "-z-10"
+        DecreaseZIndex ? "" : "z-[1000]"
       } absolute flex h-full w-full items-center justify-center`}
     >
       <MotionDiv
         id="Image_Moving_Div"
         animate={Animation}
+        onClick={() => setIsOpen(true)}
         style={{ x, y }}
         transition={{
           ...Transition,
           delay: 0.5,
         }}
         variants={Variant}
-        className={`relative flex ${
+        className={`relative z-10 flex cursor-pointer ${
           isMobile ? "h-[130px] w-[130px]" : "h-[195px] w-[195px]"
         }`}
       >

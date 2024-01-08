@@ -16,8 +16,8 @@ export function About_ShortL({ isMobile }: { isMobile: boolean }) {
         specialized focus in Marketing. Alongside my studies, I thrive on the
         creative intersection of business strategy and technological
         innovation...
-        <span className="cursor-default whitespace-nowrap px-1 font-medium text-sky-400 transition-colors hover:text-sky-300">
-          see more
+        <span className="cursor-default whitespace-nowrap px-1 font-semibold">
+          scroll down
         </span>
       </p>
     </div>
@@ -41,8 +41,8 @@ export function About_ShortR({ isMobile }: { isMobile: boolean }) {
             with a specialized focus in Marketing. Alongside my studies, I
             thrive on the creative intersection of business strategy and
             technological innovation...
-            <span className="cursor-default whitespace-nowrap px-1 font-medium text-sky-400 transition-colors hover:text-sky-300">
-              see more
+            <span className="cursor-default whitespace-nowrap px-1 font-semibold">
+              scroll down
             </span>
           </p>
         </div>

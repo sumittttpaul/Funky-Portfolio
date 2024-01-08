@@ -46,7 +46,7 @@ export default function TextArrayAnimation({
           isMobile ? "text-[18px]" : "text-[25px]"
         } font-extrabold tracking-wider`}
       >
-        <span className="bg-gradient-to-r from-[#ffa500] to-[#ff4500] bg-clip-text text-transparent">
+        <span className="from-loading-yellow to-loading-red bg-gradient-to-r bg-clip-text text-transparent">
           I&apos;m
         </span>
       </h1>

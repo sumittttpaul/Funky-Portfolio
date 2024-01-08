@@ -51,5 +51,8 @@ These are all the libraries that has been used to build this project :-
 8. Sharp
 9. Tailwindcss
 10. cssnano
-11. Dev - Prettier, Eslint, Typescript, React, Next
+11. AnimeJs
+12. Headlessui
+13. Heroicons
+14. Dev - PostCss, Prettier, Eslint, Typescript, React, Next
 ```

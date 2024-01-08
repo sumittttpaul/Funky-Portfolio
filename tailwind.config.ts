@@ -11,6 +11,16 @@ const config: Config = {
     extend: {
       colors: {
         "body-color": "#000814",
+        "loading-yellow": "#ffa500",
+        "loading-red": "#ff4500",
+        "dot-black": "#111111",
+        "dot-white": "#ebecf3",
+        "sales-badge": "#91020090",
+        "tech-badge": "#b48a0090",
+        "coding-badge": "#b48a0090",
+        "marketing-badge": "#0063b490",
+        "about-pink": "#8b0048",
+        "about-purple": "#30005c",
         "dark-red": "#4B0000", // rgba(75, 0, 0, 1)
         "dark-pink": "#45004B", // rgba(69, 0, 75, 1)
         "dark-blue": "#003C4B", // rgba(0, 60, 75, 1)
@@ -25,6 +35,10 @@ const config: Config = {
         "super-dark-green": "#003008", // rgba(0, 48, 8, 1)
         "super-dark-purple": "#1F003B", // rgba(31, 0, 59, 1)
         "super-dark-orange": "#362100", // rgba(54, 33, 0, 1)
+      },
+      screens: {
+        "dot-xl": "1350px",
+        "max-xl": "1500px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

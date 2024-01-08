@@ -28,7 +28,7 @@ function Text(props: { children: React.ReactNode; isMobile: boolean }) {
 
 export function SalesBadge({ isMobile }: { isMobile: boolean }) {
   return (
-    <Box BGColor={`bg-[#91020090] ${isMobile ? "w-[70px]" : "w-[80px]"}`}>
+    <Box BGColor={`bg-sales-badge ${isMobile ? "w-[70px]" : "w-[80px]"}`}>
       <Image
         height={isMobile ? 17 : 20}
         width={isMobile ? 17 : 20}
@@ -42,7 +42,7 @@ export function SalesBadge({ isMobile }: { isMobile: boolean }) {
 
 export function TechBadge({ isMobile }: { isMobile: boolean }) {
   return (
-    <Box BGColor={`bg-[#b48a0090] ${isMobile ? "w-[66px]" : "w-[76px]"}`}>
+    <Box BGColor={`bg-tech-badge ${isMobile ? "w-[66px]" : "w-[76px]"}`}>
       <Image
         height={isMobile ? 17 : 20}
         width={isMobile ? 17 : 20}
@@ -56,7 +56,7 @@ export function TechBadge({ isMobile }: { isMobile: boolean }) {
 
 export function CodingBadge({ isMobile }: { isMobile: boolean }) {
   return (
-    <Box BGColor={`bg-[#b48a0090] ${isMobile ? "w-[80px]" : "w-[92px]"}`}>
+    <Box BGColor={`bg-coding-badge ${isMobile ? "w-[80px]" : "w-[92px]"}`}>
       <Image
         height={isMobile ? 17 : 20}
         width={isMobile ? 17 : 20}
@@ -71,7 +71,7 @@ export function CodingBadge({ isMobile }: { isMobile: boolean }) {
 export function MarketingBadge({ isMobile }: { isMobile: boolean }) {
   return (
     <Box
-      BGColor={`bg-[#0063b490] space-x-2 ${
+      BGColor={`bg-marketing-badge space-x-2 ${
         isMobile ? "w-[97px]" : "w-[113px]"
       }`}
     >
