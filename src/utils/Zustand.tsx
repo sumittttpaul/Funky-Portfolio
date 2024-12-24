@@ -6,6 +6,6 @@ interface LoadingState {
 }
 
 export const useLoadingState = create<LoadingState>()((set) => ({
-  Complete: true, // false
+  Complete: false, // false
   toggleComplete: () => set((value) => ({ Complete: !value.Complete })),
 }));

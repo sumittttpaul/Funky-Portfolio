@@ -24,7 +24,7 @@ import Image, { StaticImageData } from "next/image";
 
 export default function TechThatIKnow({ isMobile }: { isMobile: boolean }) {
   return (
-    <div className="mt-20 relative flex h-full w-full flex-col place-content-center space-y-3 overflow-hidden text-center lg:h-screen lg:space-y-5">
+    <div className="relative mt-20 flex h-full w-full flex-col place-content-center space-y-3 overflow-hidden text-center lg:h-screen lg:space-y-5">
       <div className="mb-14">
         <h1
           className={`${
@@ -42,7 +42,7 @@ export default function TechThatIKnow({ isMobile }: { isMobile: boolean }) {
           apps.
         </h2>
       </div>
-      <div className="techthatiknow-animation-move techthatiknow-animation-duration-90 animation-direction-normal flex space-x-3 lg:space-x-5">
+      <div className="techthatiknow-animation-move techthatiknow-animation-duration-1 animation-direction-normal flex space-x-3 lg:space-x-5">
         {shuffleArray(DataSet).map((data, i) => (
           <Card
             key={i}
@@ -54,7 +54,7 @@ export default function TechThatIKnow({ isMobile }: { isMobile: boolean }) {
           />
         ))}
       </div>
-      <div className="techthatiknow-animation-move techthatiknow-animation-duration-40 animation-direction-reverse flex space-x-3 lg:space-x-5">
+      <div className="techthatiknow-animation-move techthatiknow-animation-duration-2 animation-direction-reverse flex space-x-3 lg:space-x-5">
         {shuffleArray(DataSet).map((data, i) => (
           <Card
             key={i}
@@ -66,7 +66,7 @@ export default function TechThatIKnow({ isMobile }: { isMobile: boolean }) {
           />
         ))}
       </div>
-      <div className="techthatiknow-animation-move techthatiknow-animation-duration-140 animation-direction-normal flex space-x-3 lg:space-x-5">
+      <div className="techthatiknow-animation-move techthatiknow-animation-duration-3 animation-direction-normal flex space-x-3 lg:space-x-5">
         {shuffleArray(DataSet).map((data, i) => (
           <Card
             key={i}
@@ -129,10 +129,13 @@ function Card({
         >
           {Description}
         </p>
-        <div className="absolute right-3 top-3 flex space-x-[5px]">
+        {/* <div className="absolute right-3 top-3 flex space-x-[5px]">
           <div className="h-[15px] w-[5px] bg-techthatiknow-button-color" />
           <div className="h-[15px] w-[5px] bg-techthatiknow-button-color" />
-        </div>
+        </div> */}
+        <span className="absolute right-2.5 top-2 text-5xl text-slate-700 lg:text-7xl">
+          &quot;
+        </span>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ export default function Name({ isMobile }: { isMobile: boolean }) {
   return (
     <SpotlightDynamic
       isMobile={isMobile}
-      className="flex h-auto w-full flex-col items-center justify-start lg:h-[50%] lg:w-auto xl:h-auto"
+      className="flex h-full w-full flex-col items-center justify-start lg:h-[50%] lg:w-auto xl:h-auto"
     >
       <SpotlightCardDynamic
         isMobile={isMobile}

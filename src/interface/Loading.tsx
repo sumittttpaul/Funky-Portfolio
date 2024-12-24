@@ -3,7 +3,7 @@
 import TextArrayAnimation from "components/TextArrayAnimation";
 import UserButton from "components/UserButton";
 import ViewPhoto from "components/ViewPhoto";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MotionDiv } from "utils/FramerMotion";
 import { useLoadingState } from "utils/Zustand";
 
@@ -16,6 +16,14 @@ export default function Loading({ isMobile }: { isMobile: boolean }) {
   const LoadingState = useLoadingState();
   const onAnimationComplete = () => LoadingState.toggleComplete();
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.documentElement.style.setProperty("--hide-scrollbar", "none");
+    } else {
+      document.documentElement.style.setProperty("--hide-scrollbar", "block");
+    }
+  }, [isOpen]);
 
   return (
     <>

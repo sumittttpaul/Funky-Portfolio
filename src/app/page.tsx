@@ -11,6 +11,7 @@ import SuggestionLabel from "interface/SuggestionLabel";
 import BubbleText from "interface/BubbleText";
 import LetterChanging from "interface/LetterChanging";
 import TechThatIKnow from "interface/TechThatIKnow";
+import SignatureAnimation from "interface/SignatureAnimation";
 
 export default function Home() {
   const headersList = headers();
@@ -18,7 +19,7 @@ export default function Home() {
   const isMobile = parse(userAgent).isMobile;
 
   return (
-    <ClientDiv className="relative flex w-screen flex-col">
+    <ClientDiv isMobile={isMobile} className="relative flex w-screen flex-col">
       <div className="flex w-full flex-col">
         {/* Added "pt-24" between "Back to LinkedIn" button and "Hello, I am" */}
         <section className="relative mx-auto flex h-full w-full max-w-screen-max-xl">
@@ -34,6 +35,9 @@ export default function Home() {
         </section>
         <section className="flex h-full w-full flex-col">
           <TechThatIKnow isMobile={isMobile} />
+        </section>
+        <section className="mx-auto flex h-full w-full max-w-screen-max-xl flex-col p-5">
+          <SignatureAnimation />
         </section>
         {!isMobile && (
           <>

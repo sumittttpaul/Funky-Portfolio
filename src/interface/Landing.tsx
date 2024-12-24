@@ -8,7 +8,7 @@ import Talks from "components/Talks";
 
 export default function Landing({ isMobile }: { isMobile: boolean }) {
   return (
-    <main className="flex h-full w-full flex-col lg:flex-row">
+    <main className="flex h-full w-full flex-col lg:h-screen lg:flex-row">
       <div className="z-10 flex h-full w-full flex-col justify-center">
         <Name isMobile={isMobile} />
         {!isMobile && <Causes />}
