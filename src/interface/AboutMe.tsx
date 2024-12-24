@@ -2,14 +2,14 @@ import { DotsAnimationR, DotsAnimationL } from "components/DotsAnimation";
 
 export default function AboutMe({ isMobile }: { isMobile: boolean }) {
   return (
-    <div className="flex h-full w-full flex-col bg-white p-5">
+    <div className="flex h-full w-full flex-col p-5">
       <div className="relative mx-auto flex h-[600px] w-full max-w-screen-max-xl flex-col place-content-center lg:h-screen">
         {/* radial gradient */}
         <div className="absolute left-0 top-0 -z-10 -ml-[300px] -mt-[200px] block aspect-square h-[600px] min-h-[600px] w-[600px] min-w-[600px] bg-gradient-radial from-dark-pink to-75% lg:ml-0 lg:mt-0" />
         <div className="absolute bottom-0 right-0 -z-10 -mb-[200px] -mr-[300px] block aspect-square h-[600px] min-h-[600px] w-[600px] min-w-[600px] bg-gradient-radial from-dark-purple to-75% lg:mb-0 lg:mr-0" />
         {/* moving radial gradient */}
         <div className="absolute -z-10 mt-[60px] flex h-full w-full place-content-center lg:mt-0">
-          <div className="animating-border-radius from-about-pink to-about-purple flex aspect-square h-[300px] w-[300px] bg-gradient-to-r blur-[20px] sm:h-[400px] sm:w-[400px] lg:h-[600px] lg:w-[600px]" />
+          <div className="animating-border-radius flex aspect-square h-[300px] w-[300px] bg-gradient-to-r from-about-pink to-about-purple blur-[20px] sm:h-[400px] sm:w-[400px] lg:h-[600px] lg:w-[600px]" />
         </div>
         {/* dot grid */}
         <div className="absolute left-0 hidden h-full items-center justify-center dot-xl:flex">
