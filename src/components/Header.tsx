@@ -4,7 +4,7 @@ export default function Header({ isMobile }: { isMobile: boolean }) {
   return (
     <header className="absolute left-5 top-5 z-20 flex h-auto w-auto">
       <Link
-        href=""
+        href="https://www.linkedin.com/in/sumitttpaul/"
         className={`group ${
           isMobile ? "w-[140px]" : "w-[165px]"
         } rounded-lg py-2 text-sky-400 transition-colors hover:bg-sky-600/20 lg:w-[185px]`}
