@@ -7,8 +7,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sumeet Kumar Paul",
-  description: "Portfolio by Sumit",
+  title: "Funky Portfolio • Sumeet Kumar Paul",
+  description: "Modern Funky Portfolio • Sumeet Kumar Paul",
 };
 
 export const viewport: Viewport = {
