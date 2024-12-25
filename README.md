@@ -1,4 +1,4 @@
-Hello, I am Sumeet Kumar Paul and here is my portfolio, so let's get started.
+Hello, I am Sumeet Kumar Paul and here is Funky Portfolio, so let's get started.
 
 ## Getting Started
 
@@ -10,35 +10,9 @@ These portfolio contains three sections :-
 3. About Me
 ```
 
-## Components Used
+## Tech and Libraries Used
 
-These are all the components with files extensions :-
-You can find these files in components folder.
-
-```bash
-1. About.Short.tsx
-2. Badge.tsx
-3. Card.tsx
-4. Causes.tsx
-5. ClientDiv.tsx
-6. Header.tsx
-7. Loader.tsx
-8. Mascot.tsx
-9. Name.tsx
-10. Preference.tsx
-11. Skills.tsx
-12. Spotlight.tsx
-13. StarBackground.tsx
-14. Talks.tsx
-15. TextArrayAnimation.tsx
-16. TextTypeAnimation.tsx
-16. UserButton.tsx
-17. About.tsx
-```
-
-## Libraries Used
-
-These are all the libraries that has been used to build this project :-
+These are all the framework and libraries that has been used to build this project :-
 
 ```bash
 1. Framer Motion
@@ -56,3 +30,20 @@ These are all the libraries that has been used to build this project :-
 13. Heroicons
 14. Dev - PostCss, Prettier, Eslint, Typescript, React, Next
 ```
+
+## Functionalities Implemented
+
+These are all the functionalities that has been implemented in this project :-
+
+```bash
+1. Landing Page
+2. Profile Picture Modal
+3. Mobile Responsive
+```
+
+## Components Used
+
+All the components - You can find in components folder.
+
+
+
