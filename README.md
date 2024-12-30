@@ -1,3 +1,5 @@
+![funkyportfolio vercel app](https://github.com/user-attachments/assets/3b1e294d-0cc9-467d-8bef-608321be98a8)
+
 Hello, I am Sumeet Kumar Paul and here is Funky Portfolio, so let's get started.
 
 ## Getting Started
