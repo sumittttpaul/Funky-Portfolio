@@ -2,6 +2,8 @@
 
 Hello, I am Sumeet Kumar Paul and here is Funky Portfolio, so let's get started.
 
+Watch the video to learn about all the features of this project: [video/funkyportfolio](https://drive.google.com/file/d/1bEup2rXIcwbq5sVHkvvQQwuyci9l2oy9/view?usp=sharing)
+
 ## Getting Started
 
 These portfolio contains three sections :-
